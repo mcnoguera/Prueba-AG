@@ -1,0 +1,255 @@
+body{
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    background:  #7c3dc918
+}
+header{
+    width: 100%;
+    background: #7d3dc9;
+}
+#btn-menu{
+    display: none;
+}
+
+
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding:10px;
+    border-right: 1px solid #000000;
+}
+header label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3)
+}
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content:center;
+  
+}
+.menu li {
+    flex-grow: 1;
+    border-right: 1px solid #fff;
+}
+.menu li:hover{
+    background: rgba(0,0,0,0.3);
+}
+.menu li a {
+    display: block;
+    padding: 5px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.texto-inicio {
+    text-align: justify;
+    padding: 2%;
+    margin: 20% 10% 10% 10%;
+    font-size: 1.2vw;
+    position: absolute;
+    background:   #e9e2f38a;
+    border-radius: 10%;
+}
+
+@media (max-width:1025px)
+{
+    .texto-inicio {
+        text-align: justify;
+        padding: 2%;
+        margin-top: 25% ;
+        font-size: 1vw;
+        position: absolute;
+        border-radius: 10%;
+   }
+}
+
+
+.content-all{
+    width: 210px;
+    margin: auto;
+    perspective: 800px;
+    position: relative;
+    margin-top: 50px;
+    justify-content:center;
+
+}
+
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    animation: rotar 20s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.content-carrousel:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+
+.content-carrousel figure{
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px black;
+    transition: all 300ms;
+    position: absolute;
+}
+
+.content-carrousel figure:hover{
+    box-shadow: 0px 0px 0px 0px black;
+    transition: all 300ms;
+}
+
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
+.content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+.content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
+.content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
+.content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
+.content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
+.content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
+.content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
+.content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
+
+.content-carrousel img{
+    width: 100%;
+    height: auto;   
+    transition: all 300ms;
+    
+}
+
+.content-carrousel img:hover{
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+
+
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    }to{
+        transform: rotateY(360deg);
+    }
+}
+@media (max-width:769px){
+    header label {
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        z-index: 1;
+        background: #935ae5;
+        widows: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li {
+        border-top: 1px solid #fff;
+    }
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+
+    }
+    .texto-inicio {
+        text-align: justify;
+        padding: 2%;
+        margin-top: 30%;
+        font-size: 1vw;
+        position: absolute;
+        border-radius: 10%;
+   }
+}
+@media (max-width:426px){
+    .content-all{
+        width: 70px;
+        margin: auto;
+        perspective: 800px;
+        position: relative;
+        margin-top: 50px;
+        justify-content:center;
+    
+    }
+    
+    .content-carrousel{
+        width: 100%;
+        position: absolute;
+        animation: rotar 20s infinite linear;
+        transform-style: preserve-3d;
+    }
+    
+    .content-carrousel:hover{
+        animation-play-state: paused;
+        cursor: pointer;
+    }
+    
+    
+    .content-carrousel figure{
+        width: 100%;
+        height: 40px;
+        overflow: hidden;
+        position: absolute;
+        box-shadow: 0px 0px 10px 0px black;
+        transition: all 300ms;
+        position: absolute;
+    }
+    
+    .content-carrousel figure:hover{
+        box-shadow: 0px 0px 0px 0px black;
+        transition: all 300ms;
+    }
+    
+    .content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(100px);}
+    .content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(100px);}
+    .content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(100px);}
+    .content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(100px);}
+    .content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(100px);}
+    .content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(100px);}
+    .content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(100px);}
+    .content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(100px);}
+    .content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(100px);}
+    .content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(100px);}
+    
+    .content-carrousel img{
+        width: 100%;
+        height: auto;   
+        transition: all 300ms;
+        
+    }
+    
+    .content-carrousel img:hover{
+        transform: scale(1.2);
+        transition: all 300ms;
+    }
+    
+    
+    @keyframes rotar{
+        from{
+            transform: rotateY(0deg);
+        }to{
+            transform: rotateY(360deg);
+        }
+    }
+    .texto-inicio {
+        text-align: justify;
+        padding: 2%;
+        margin-top: 23%;
+        font-size: 1vw;
+        position: absolute;
+        border-radius: 10%;
+   }
+}
+.esperamos{
+    text-align: center;
+}
+
+
+

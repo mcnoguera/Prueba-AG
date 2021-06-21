@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    background:  #7c3dc918
+}
+header{
+    width: 100%;
+    background: #7d3dc9;
+}
+#btn-menu{
+    display: none;
+}
+
+
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding:10px;
+    border-right: 1px solid #000000;
+}
+header label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3)
+}
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content:center;
+  
+}
+.menu li {
+    flex-grow: 1;
+    border-right: 1px solid #fff;
+}
+.menu li:hover{
+    background: rgba(0,0,0,0.3);
+}
+.menu li a {
+    display: block;
+    padding: 5px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+@media (max-width:769px){
+    header label {
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        z-index: 1;
+        background: #935ae5;
+        widows: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li {
+        border-top: 1px solid #fff;
+    }
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+
+    }
+}
+form {
+    width: 450px;
+    margin:auto;
+    background: #935ae5;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: no;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+.boton {
+    background: #31384A;
+    color: #fff;
+    padding: 20px;
+}
+
+#boton:hover {
+    cursor: pointer;
+
+}
+
+@media (max-width:480px) {
+    form{
+        width: 100%;
+        
+    }
+}
